@@ -4,7 +4,7 @@ document.getElementById("play").addEventListener ("click", function () {
         const numgen = createNumRandomOrd(5, 1, 100);
         num.innerHTML = numgen;
         const timer = document.getElementById("timer");
-        let seconds = 5;
+        let seconds = 1;
         let score = 0;
         let clock = setInterval(
             function(){
@@ -15,12 +15,10 @@ document.getElementById("play").addEventListener ("click", function () {
                     for (let i = 0; i < 5; i++){
                         const numr =parseInt(prompt("Inserisci i numeri"));
                         console.log(numr);
-                        document.getElementById("numr").innerHTML = numr;
-                        num.innerHTML += numr + " ";
                         if (numgen.includes(numr)){
                             score++;
                             document.getElementById("corretti").innerHTML += numr + " ";
-                            console.log("bravo");
+                            console.log("corretto");
                         } else {
                             document.getElementById("sbagliati").innerHTML += numr + " ";
                             console.log("sbagliato");
